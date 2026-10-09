@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhay Singh Chauhan | SEO & Digital Marketing Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500 to-emerald-700 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    ASC
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg tracking-tight leading-none group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">Abhay Singh Chauhan</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">SEO & Digital Marketing</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#about" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a>
+                <a href="#skills" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Technical Skills</a>
+                <a href="#ecosystem" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Ecosystem</a>
+                <a href="#projects" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Projects</a>
+                <a href="#connect" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Find Me Online</a>
+                <a href="#contact" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions (Theme Toggle & Mobile Menu Button) -->
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors focus:outline-none" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-amber-400"></i>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden w-10 h-10 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-200 focus:outline-none" aria-label="Open Menu">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-slate-200 dark:border-slate-800 px-6 py-5 space-y-4 shadow-xl">
+            <a href="#about" class="block text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 mobile-link">About</a>
+            <a href="#skills" class="block text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 mobile-link">Technical Skills</a>
+            <a href="#ecosystem" class="block text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 mobile-link">Ecosystem</a>
+            <a href="#projects" class="block text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 mobile-link">Projects</a>
+            <a href="#connect" class="block text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 mobile-link">Find Me Online</a>
+            <a href="#contact" class="block text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Background Glow Blobs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/10 dark:bg-brand-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-emerald-400/10 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-brand-700 dark:text-brand-300 font-semibold text-xs sm:text-sm mb-6 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                BBA Student & SEO Professional
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight">
+                Driving Growth Through <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-emerald-500">SEO & Data Analytics</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+                Hi, I'm <strong class="text-slate-900 dark:text-white font-semibold">Abhay Singh Chauhan</strong>. I combine analytical thinking with digital expertise to maximize online visibility and deliver actionable business results.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-lg shadow-brand-600/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-sm"></i> Let's Connect
+                </a>
+                <a href="#skills" class="px-8 py-4 rounded-xl glass-card font-semibold hover:bg-slate-200 dark:hover:bg-slate-800 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-code text-sm text-brand-600 dark:text-brand-400"></i> Explore Skills
+                </a>
+            </div>
+
+            <!-- Quick Info Bar -->
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div class="glass-card p-5 rounded-2xl flex items-center gap-4 text-left shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xs text-slate-500 dark:text-slate-400 font-medium">Education</h3>
+                        <p class="text-sm font-bold text-slate-900 dark:text-white">BBA Student</p>
+                    </div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl flex items-center gap-4 text-left shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xs text-slate-500 dark:text-slate-400 font-medium">Email Address</h3>
+                        <p class="text-sm font-bold text-slate-900 dark:text-white break-all">chauhands2004@gmail.com</p>
+                    </div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl flex items-center gap-4 text-left shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xs text-slate-500 dark:text-slate-400 font-medium">Location</h3>
+                        <p class="text-sm font-bold text-slate-900 dark:text-white">India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Professional Profile</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">About Me</h2>
+            </div>
+            <div class="glass-card p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-bl-full pointer-events-none"></div>
+                <p class="text-lg sm:text-xl text-slate-700 dark:text-slate-200 leading-relaxed font-normal text-justify sm:text-left">
+                    I am Abhay Singh Chauhan, a dedicated BBA student with a strong interest in Search Engine Optimization (SEO), digital marketing, and business analytics. I focus on developing practical skills that help businesses improve their online visibility and make data-driven decisions. From optimizing website content and conducting keyword research to analyzing data using Excel, I aim to combine analytical thinking with digital skills to deliver meaningful results and support business growth.
+                </p>
+                <div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-3 h-3 rounded-full bg-brand-500"></div>
+                        <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Focus: SEO Strategy & Analytics</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                        <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Goal: Scalable Online Growth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Expertise & Competencies</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Technical Skills</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 max-w-xl mx-auto">Specialized skill set geared toward optimizing digital presence and organic search performance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill 1 -->
+                <div class="glass-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Keyword Research</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Keyword identification, search intent analysis, and keyword planning.</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="glass-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">On-Page SEO</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Title tags, meta descriptions, headings, URL optimization, and internal linking.</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="glass-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Technical SEO</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">XML sitemaps, robots.txt, canonical tags, indexing, and crawlability basics.</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="glass-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Off-Page SEO</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Backlink research and link-building fundamentals.</p>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="glass-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">SEO Tools</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Google Search Console, Google Analytics, and Google Trends.</p>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="glass-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Content Optimization</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">SEO-friendly content structure, image alt text, and content optimization.</p>
+                </div>
+
+                <!-- Skill 7 -->
+                <div class="glass-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all group md:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Website Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Blogger, website structure, and basic SEO implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Tools & Ecosystem Section -->
+    <section id="ecosystem" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Workflow & Utilities</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Other Tools & Ecosystem</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 max-w-xl mx-auto">Software suites and productivity platforms used to streamline daily operations and analytics.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Ecosystem 1 -->
+                <div class="glass-card p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">Google Workspace</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Google Docs, Google Sheets, and Google Forms.</p>
+                </div>
+
+                <!-- Ecosystem 2 -->
+                <div class="glass-card p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-brands fa-wordpress"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">Content Management Systems</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Blogger and WordPress.</p>
+                </div>
+
+                <!-- Ecosystem 3 -->
+                <div class="glass-card p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">Design & Visuals</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Canva for blog graphics and social media creatives.</p>
+                </div>
+
+                <!-- Ecosystem 4 -->
+                <div class="glass-card p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-table"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">Productivity & Research</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Microsoft Excel, Google Trends, and online research tools.</p>
+                </div>
+
+                <!-- Ecosystem 5 -->
+                <div class="glass-card p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-600 flex items-center justify-center font-bold">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">Web & Portfolio</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">GitHub for portfolio management and project presentation.</p>
+                </div>
+
+                <!-- Ecosystem 6 -->
+                <div class="glass-card p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-rose-500/10 text-rose-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg">SEO Ecosystem</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Google Search Console, Google Analytics, and SEO research tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Published Work</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Featured Projects</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 max-w-xl mx-auto">Live SEO and digital marketing articles I researched, wrote, and published on my blog, Learning Platform Hub.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Project 1 -->
+                <article class="glass-card rounded-2xl overflow-hidden shadow-xl flex flex-col hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-tr from-brand-600/20 to-emerald-500/20 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-bullhorn text-4xl text-brand-600 dark:text-brand-400 mb-2"></i>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Digital Marketing</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-semibold">Digital Marketing</span>
+                                <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-semibold">Beginner Guide</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">What is Digital Marketing?</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">A clear introduction to digital marketing: its channels, benefits, and how businesses use it to reach and convert customers online.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i>June 2026</span>
+                            <a href="https://learningplatformhub.blogspot.com/2026/06/what-is-digital-marketing.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Read Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="glass-card rounded-2xl overflow-hidden shadow-xl flex flex-col hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-tr from-blue-600/20 to-indigo-500/20 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-magnifying-glass text-4xl text-blue-600 dark:text-blue-400 mb-2"></i>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">SEO</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold">SEO</span>
+                                <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold">Beginner Guide</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">What is SEO? Complete Beginner Guide 2026</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">A complete beginner-friendly guide explaining how SEO works, why it matters, and the core pillars of ranking on Google.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i>June 2026</span>
+                            <a href="https://learningplatformhub.blogspot.com/2026/06/what-is-seo-complete-beginner-guide-2026.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Read Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="glass-card rounded-2xl overflow-hidden shadow-xl flex flex-col hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-tr from-emerald-600/20 to-teal-500/20 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-pen-nib text-4xl text-emerald-600 dark:text-emerald-400 mb-2"></i>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Blogging</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">Blogging</span>
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">Content Strategy</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">What is Blogging? Benefits, Uses & How to Start</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Explains what blogging is, its benefits and uses, and a step-by-step approach to starting a blog in 2026.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i>June 2026</span>
+                            <a href="https://learningplatformhub.blogspot.com/2026/06/what-is-blogging-benefits-uses-how-to-start-2026.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Read Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="glass-card rounded-2xl overflow-hidden shadow-xl flex flex-col hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-tr from-purple-600/20 to-fuchsia-500/20 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-chart-line text-4xl text-purple-600 dark:text-purple-400 mb-2"></i>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Analytics</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-semibold">Search Console</span>
+                                <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-semibold">SEO Analytics</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">What is Google Search Console?</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">A practical overview of Google Search Console: tracking performance, indexing, and fixing issues that affect search visibility.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i>July 2026</span>
+                            <a href="https://learningplatformhub.blogspot.com/2026/07/what-is-google-search-console.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Read Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="glass-card rounded-2xl overflow-hidden shadow-xl flex flex-col hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-tr from-brand-600/20 to-emerald-500/20 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-file-lines text-4xl text-brand-600 dark:text-brand-400 mb-2"></i>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">On-Page SEO</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-semibold">On-Page SEO</span>
+                                <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-semibold">Content Optimization</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">On-Page SEO Guide</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Covers on-page optimization essentials: title tags, meta descriptions, headings, URLs, content quality, and internal linking.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i>July 2026</span>
+                            <a href="https://learningplatformhub.blogspot.com/2026/07/on-page-seo-guide.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Read Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="glass-card rounded-2xl overflow-hidden shadow-xl flex flex-col hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-tr from-blue-600/20 to-indigo-500/20 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-link text-4xl text-blue-600 dark:text-blue-400 mb-2"></i>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Off-Page SEO</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold">Off-Page SEO</span>
+                                <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold">Link Building</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Off-Page SEO</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Explains off-page SEO and link-building fundamentals, including backlinks, authority, and brand signals that support rankings.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i>August 2026</span>
+                            <a href="https://learningplatformhub.blogspot.com/2026/08/Off-Page-SEO.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Read Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7 -->
+                <article class="glass-card rounded-2xl overflow-hidden shadow-xl flex flex-col hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-tr from-emerald-600/20 to-teal-500/20 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-triangle-exclamation text-4xl text-emerald-600 dark:text-emerald-400 mb-2"></i>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Blogging</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">Blogging</span>
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">Best Practices</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Common Blogging Mistakes Beginners Make</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Highlights the most frequent mistakes new bloggers make and practical ways to avoid them for better growth and rankings.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i>September 2026</span>
+                            <a href="https://learningplatformhub.blogspot.com/2026/09/common-blogging-mistakes-beginners-make.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Read Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 8 -->
+                <article class="glass-card rounded-2xl overflow-hidden shadow-xl flex flex-col hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-40 bg-gradient-to-tr from-purple-600/20 to-fuchsia-500/20 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-envelope-open-text text-4xl text-purple-600 dark:text-purple-400 mb-2"></i>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Email Marketing</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-semibold">Email Marketing</span>
+                                <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-semibold">Campaigns</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Mastering Email Marketing Campaigns</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">A guide to planning, building, and optimizing email marketing campaigns that engage subscribers and drive results.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-calendar mr-1"></i>October 2026</span>
+                            <a href="https://learningplatformhub.blogspot.com/2026/10/mastering-email-marketing-campaigns.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">Read Article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://learningplatformhub.blogspot.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-lg shadow-brand-600/25 transition-all">
+                    <i class="fa-solid fa-globe"></i> Visit My Blog
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Me Online Section -->
+    <section id="connect" class="py-20 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Connect</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Find Me Online</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 max-w-xl mx-auto">Connect with me on LinkedIn, explore my work on GitHub, or reach out directly by email.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://www.linkedin.com/in/abhay-singh-chauhan-375856419" target="_blank" rel="noopener noreferrer" class="glass-card group p-8 rounded-3xl shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">LinkedIn</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 break-all">Professional Network</p>
+                    <span class="mt-6 text-sm font-semibold text-brand-600 dark:text-brand-400 flex items-center gap-2">View Profile <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></span>
+                </a>
+                <a href="https://github.com/abhaysc9580-star" target="_blank" rel="noopener noreferrer" class="glass-card group p-8 rounded-3xl shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-slate-500/10 text-slate-800 dark:text-slate-200 flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">GitHub</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 break-all">Projects &amp; Code</p>
+                    <span class="mt-6 text-sm font-semibold text-brand-600 dark:text-brand-400 flex items-center gap-2">View Profile <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></span>
+                </a>
+                <a href="mailto:chauhands2004@gmail.com" class="glass-card group p-8 rounded-3xl shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Email</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 break-all">chauhands2004@gmail.com</p>
+                    <span class="mt-6 text-sm font-semibold text-brand-600 dark:text-brand-400 flex items-center gap-2">Send an Email <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Let's Work Together</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 max-w-xl mx-auto">Have a project in mind or want to talk about SEO and digital growth? Send a message!</p>
+            </div>
+
+            <div class="glass-card p-8 sm:p-12 rounded-3xl shadow-xl">
+                <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-900 dark:text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Your Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-900 dark:text-white">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Subject</label>
+                        <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-900 dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                        <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-900 dark:text-white"></textarea>
+                    </div>
+                    <input type="text" name="_honey" id="honey" style="display:none" tabindex="-1" autocomplete="off">
+                    <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-lg shadow-brand-600/25 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+                <div id="form-error" class="hidden mt-6 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-700 dark:text-red-300 text-center font-medium">
+                    Sorry, the message could not be sent. Please email me directly at <a href="mailto:chauhands2004@gmail.com" class="underline">chauhands2004@gmail.com</a>.
+                </div>
+                <div id="form-success" class="hidden mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-center font-medium">
+                    Thank you! Your message has been sent successfully. I will get back to you soon.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-14 pb-8 bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500 to-emerald-700 flex items-center justify-center text-white font-extrabold text-sm shadow-lg shadow-brand-500/20">ASC</div>
+                <span class="font-bold text-xl text-white">Abhay Singh Chauhan</span>
+            </div>
+            <p class="text-sm text-slate-400 mb-8">SEO &amp; Digital Marketing</p>
+
+            <div class="flex items-center justify-center gap-4 mb-3">
+                    <a href="https://www.linkedin.com/in/abhay-singh-chauhan-375856419" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 text-xl hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/abhaysc9580-star" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 text-xl hover:bg-slate-700 hover:border-slate-500 hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="mailto:chauhands2004@gmail.com" aria-label="Email" title="Email" class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 text-xl hover:bg-brand-600 hover:border-brand-600 hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+            </div>
+            <a href="mailto:chauhands2004@gmail.com" class="text-sm text-slate-400 hover:text-white transition-colors mb-8">chauhands2004@gmail.com</a>
+
+            <div class="w-full border-t border-slate-800 pt-6 text-xs text-slate-500">
+                &copy; 2026 Abhay Singh Chauhan. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle Functionality with Persistence
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Check initial theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form: sends message to email via FormSubmit
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            const btn = document.getElementById('submit-btn');
+            const successDiv = document.getElementById('form-success');
+            const errorDiv = document.getElementById('form-error');
+            if (document.getElementById('honey').value) return;
+
+            const payload = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                _subject: 'Portfolio Contact: ' + document.getElementById('subject').value,
+                _replyto: document.getElementById('email').value,
+                _template: 'table',
+                _captcha: 'false'
+            };
+
+            const originalBtn = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            successDiv.classList.add('hidden');
+            errorDiv.classList.add('hidden');
+
+            try {
+                const res = await fetch('https://formsubmit.co/ajax/chauhands2004@gmail.com', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                if (res.ok && (data.success === true || data.success === 'true')) {
+                    form.reset();
+                    successDiv.classList.remove('hidden');
+                    setTimeout(() => successDiv.classList.add('hidden'), 6000);
+                } else {
+                    throw new Error('Send failed');
+                }
+            } catch (err) {
+                errorDiv.classList.remove('hidden');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalBtn;
+            }
+        }
+    </script>
+</body>
+</html>
