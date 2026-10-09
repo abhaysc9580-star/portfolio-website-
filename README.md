@@ -2,9 +2,9 @@
 
 # 🚀 Welcome to My Portfolio!
 
-[![Portfolio Status](](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&logo=none])]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)]()
-[![Portfolio View](https://abhaysc9580-star.github.io/portfolio-website-/)
+[![Portfolio Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)](https://github.com/abhaysc9580-star/portfolio-website)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://github.com/abhaysc9580-star/portfolio-website)
+[![Portfolio View](https://img.shields.io/badge/Live-Demo-orange?style=for-the-badge&logo=safari)](https://abhaysc9580-star.github.io/portfolio-website-/)
 
 *A modern, responsive, and performance-optimized digital space showcasing my professional journey, technical expertise, and creative projects.*
 
